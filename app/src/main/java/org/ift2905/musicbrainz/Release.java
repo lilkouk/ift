@@ -140,6 +140,12 @@ public class Release extends AppCompatActivity {
             int minute= duree/60000;
             int seconde= duree % 10000;
             String k= ((Integer)seconde).toString();
+            if (k.length()==0){
+                k="00";
+
+
+            }else if (k.length()==1)
+                     k=k+"0";
 
             TextView titre =(TextView) v.findViewById(R.id.titre);
             TextView  temps= (TextView) v.findViewById(R.id.temps);
