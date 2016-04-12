@@ -6,6 +6,6 @@ public class Recording implements Serializable {
 
     public String id;
     public String name;
-    public String length;
+    public int length;
 
 }

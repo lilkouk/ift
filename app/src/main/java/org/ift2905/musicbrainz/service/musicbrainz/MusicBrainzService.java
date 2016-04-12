@@ -24,7 +24,7 @@ public class MusicBrainzService {
     private JsonAdapter<List<ReleaseGroup>> releaseGroupAdapter;
     private JsonAdapter<List<Release>> releaseAdapter;
 
-    private MusicBrainzService() {
+    public MusicBrainzService() {
         this.httpClient = new OkHttpClient();
 
         Moshi moshi = new Moshi.Builder().build();
