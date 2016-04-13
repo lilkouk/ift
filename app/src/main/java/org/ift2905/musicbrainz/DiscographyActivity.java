@@ -71,6 +71,7 @@ public class DiscographyActivity extends AppCompatActivity {
         setContentView(R.layout.activity_discography);
 
         Intent intent = getIntent();
+
         artist = (Artist) intent.getSerializableExtra("artist");
         releaseGroup = (ReleaseGroup) intent.getSerializableExtra("releaseGroup");
 
@@ -156,7 +157,7 @@ public class DiscographyActivity extends AppCompatActivity {
         }
     }
 
-    private static class Adapter extends FragmentPagerAdapter {
+    private  class Adapter extends FragmentPagerAdapter {
 
         private List<ReleaseGroup> albums;
 
@@ -175,6 +176,8 @@ public class DiscographyActivity extends AppCompatActivity {
             ReleaseGroupFragment f = new ReleaseGroupFragment();
             Bundle args = new Bundle();
             args.putSerializable("releaseGroup", albums.get(position));
+
+
             f.setArguments(args);
             return f;
         }

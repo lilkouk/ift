@@ -47,6 +47,7 @@ public class ReleaseGroupFragment extends Fragment implements View.OnClickListen
     public void onClick(View v) {
         Intent intent = new Intent(getContext(), Release.class);
         intent.putExtra("releaseGroup", releaseGroup);
+
         startActivity(intent);
     }
 }
